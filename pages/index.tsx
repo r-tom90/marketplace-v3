@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=8FRm_efm99o&list=PLhkjr9MPgk0xtGnRBmlpsGkn1NsPl9W1-&index=3
+
 import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,9 +28,9 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.heroAssetFrame}>
             <Image
-              src="/hero-asset.png"
-              width={860}
-              height={540}
+              src="/hero-marketplace1000.png"
+              width={500}
+              height={500}
               alt="Hero asset, NFT marketplace"
               quality={100}
               className={styles.heroAsset}
@@ -38,33 +40,23 @@ const Home: NextPage = () => {
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
-                  Build NFT Marketplaces
+                  MuskATears NFT Marketplaces
                 </span>
-                <br />
-                faster than ever.
               </h1>
               <p className={styles.heroSubtitle}>
+                Built with{" "}
                 <Link
                   className={styles.link}
                   href="https://thirdweb.com"
-                  target="_blank"
+                  target="blank"
                 >
                   thirdweb
                 </Link>{" "}
-                gives you the tools you need to create audited, performant, and
-                flexible NFT marketplaces in <b>hours</b>, <i>not months</i>.
               </p>
 
               <div className={styles.heroCtaContainer}>
                 <Link className={styles.heroCta} href="/buy">
                   Get Started
-                </Link>
-                <Link
-                  className={styles.secondaryCta}
-                  href="https://github.com/thirdweb-example/marketplace-v3"
-                  target="_blank"
-                >
-                  GitHub
                 </Link>
               </div>
             </div>
