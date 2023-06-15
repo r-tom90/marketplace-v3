@@ -39,7 +39,12 @@ export default function NFTComponent({ nft }: Props) {
 
   return (
     <>
-      <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
+      <ThirdwebNftMedia
+        metadata={nft.metadata}
+        controls={true}
+        requireInteraction={true}
+        className={styles.nftImage}
+      />
 
       <p className={styles.nftTokenId}>Token ID #{nft.metadata.id}</p>
       <p className={styles.nftName}>{nft.metadata.name}</p>

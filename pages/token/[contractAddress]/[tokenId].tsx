@@ -137,8 +137,12 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 {Object.entries(nft?.metadata?.attributes || {}).map(
                   ([key, value]) => (
                     <div className={styles.traitContainer} key={key}>
-                      <p className={styles.traitName}>{value?.trait_type}</p>
-                      <p className={styles.traitValue}>{value?.value || ""}</p>
+                      {/* <p className={styles.traitName}>{value?.trait_type}</p>
+                      <p className={styles.traitValue}>{value?.value || ""}</p> */}
+                      <p className={styles.traitName}>{key}</p>
+                      <p className={styles.traitValue}>
+                        {value?.toString() || ""}
+                      </p>
                     </div>
                   )
                 )}
@@ -361,8 +365,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
 
-  const nft = await contract.erc1155.get(tokenId);
-  // const nft = await contract.erc721.get(tokenId);
+  // const nft = await contract.erc1155.get(tokenId);
+  const nft = await contract.erc721.get(tokenId);
 
   let contractMetadata;
 
@@ -384,8 +388,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
 
-  const nfts = await contract.erc1155.getAll();
-  // const nfts = await contract.erc721.getAll();
+  // const nfts = await contract.erc1155.getAll();
+  const nfts = await contract.erc721.getAll();
 
   const paths = nfts.map((nft) => {
     return {

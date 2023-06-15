@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Footer from "../components/Footer";
 
 /**
  * Landing page with a simple gradient background and a hero asset.
@@ -26,32 +27,26 @@ const Home: NextPage = () => {
               />
             </div>
           </div>
-          <div className={styles.heroAssetFrame}>
+          <div className="mt-6 flex justify-center overflow-hidden p-8">
             <Image
-              src="/hero-marketplace1000.png"
+              src="/heroBg.png"
               width={500}
               height={500}
               alt="Hero asset, NFT marketplace"
               quality={100}
-              className={styles.heroAsset}
+              className="mb-4 max-w-full"
             />
           </div>
           <div className={styles.heroBodyContainer}>
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
-                  MuskATears NFT Marketplaces
+                  MuskATears NFT Emporium
                 </span>
               </h1>
               <p className={styles.heroSubtitle}>
-                Built with{" "}
-                <Link
-                  className={styles.link}
-                  href="https://thirdweb.com"
-                  target="blank"
-                >
-                  thirdweb
-                </Link>{" "}
+                Where MuskATears enthusiasts gather to explore their cherished
+                NFT collections!
               </p>
 
               <div className={styles.heroCtaContainer}>
@@ -63,6 +58,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

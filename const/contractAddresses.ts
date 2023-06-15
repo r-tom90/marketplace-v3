@@ -10,8 +10,10 @@ export const NETWORK = Goerli;
 export const MARKETPLACE_ADDRESS = "0xe88eBC6316CF32e94E7D89C8f30679fC7a56F23C";
 
 // 3. The address of your NFT collection smart contract.
+// export const NFT_COLLECTION_ADDRESS =
+//   "0x977032f177512F2273Ba5208F616982001fc3682"; // erc1155
 export const NFT_COLLECTION_ADDRESS =
-  "0x977032f177512F2273Ba5208F616982001fc3682";
+  "0xc52B39507e51476289992c86eA4105B2CAAFcED2";
 
 // (Optional) Set up the URL of where users can view transactions on
 // For example, below, we use Mumbai.polygonscan to view transactions on the Mumbai testnet.
