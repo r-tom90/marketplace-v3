@@ -22,55 +22,57 @@ export default function Sell() {
 
   return (
     <Container maxWidth="lg">
-      <h1>Sell NFTs</h1>
-      {!selectedNft ? (
-        <>
-          <p>Select which NFT you&rsquo;d like to sell below.</p>
-          <NFTGrid
-            data={data}
-            isLoading={isLoading}
-            overrideOnclickBehavior={(nft) => {
-              setSelectedNft(nft);
-            }}
-            emptyText={
-              "Looks like you don't own any NFTs in this collection. Head to the buy page to buy some!"
-            }
-          />
-        </>
-      ) : (
-        <div className={tokenPageStyles.container} style={{ marginTop: 0 }}>
-          <div className={tokenPageStyles.metadataContainer}>
-            <div className={tokenPageStyles.imageContainer}>
-              <ThirdwebNftMedia
-                metadata={selectedNft.metadata}
-                className={tokenPageStyles.image}
-              />
-              <button
-                onClick={() => {
-                  setSelectedNft(undefined);
-                }}
-                className={tokenPageStyles.crossButton}
-              >
-                X
-              </button>
+      <div className="mx-0 xl:mx-16">
+        <h1>Sell NFTs</h1>
+        {!selectedNft ? (
+          <>
+            <p>Select which NFT you&rsquo;d like to sell below.</p>
+            <NFTGrid
+              data={data}
+              isLoading={isLoading}
+              overrideOnclickBehavior={(nft) => {
+                setSelectedNft(nft);
+              }}
+              emptyText={
+                "Looks like you don't own any NFTs in this collection. Head to the buy page to buy some!"
+              }
+            />
+          </>
+        ) : (
+          <div className={tokenPageStyles.container} style={{ marginTop: 0 }}>
+            <div className={tokenPageStyles.metadataContainer}>
+              <div className={tokenPageStyles.imageContainer}>
+                <ThirdwebNftMedia
+                  metadata={selectedNft.metadata}
+                  className={tokenPageStyles.image}
+                />
+                <button
+                  onClick={() => {
+                    setSelectedNft(undefined);
+                  }}
+                  className={tokenPageStyles.crossButton}
+                >
+                  X
+                </button>
+              </div>
+            </div>
+
+            <div className={tokenPageStyles.listingContainer}>
+              <p>You&rsquo;re about to list the following item for sale.</p>
+              <h1 className={tokenPageStyles.title}>
+                {selectedNft.metadata.name}
+              </h1>
+              <p className={tokenPageStyles.collectionName}>
+                Token ID #{selectedNft.metadata.id}
+              </p>
+
+              <div className={tokenPageStyles.pricingContainer}>
+                <SaleInfo nft={selectedNft} />
+              </div>
             </div>
           </div>
-
-          <div className={tokenPageStyles.listingContainer}>
-            <p>You&rsquo;re about to list the following item for sale.</p>
-            <h1 className={tokenPageStyles.title}>
-              {selectedNft.metadata.name}
-            </h1>
-            <p className={tokenPageStyles.collectionName}>
-              Token ID #{selectedNft.metadata.id}
-            </p>
-
-            <div className={tokenPageStyles.pricingContainer}>
-              <SaleInfo nft={selectedNft} />
-            </div>
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </Container>
   );
 }

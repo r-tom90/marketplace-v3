@@ -6,6 +6,8 @@ import {
   useValidDirectListings,
   useValidEnglishAuctions,
   Web3Button,
+  useAddress,
+  ConnectWallet,
 } from "@thirdweb-dev/react";
 import React, { useState } from "react";
 import Container from "../../../components/Container/Container";
@@ -33,6 +35,7 @@ const [randomColor1, randomColor2] = [randomColor(), randomColor()];
 
 export default function TokenPage({ nft, contractMetadata }: Props) {
   const [bidValue, setBidValue] = useState<string>();
+  const address = useAddress();
 
   // Connect to marketplace smart contract
   const { contract: marketplace, isLoading: loadingContract } = useContract(
@@ -283,72 +286,84 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 </div>
               </div>
             </div>
-
-            {loadingContract || loadingDirect || loadingAuction ? (
-              <Skeleton width="100%" height="164" />
+            {!address ? (
+              <div className="flex justify-center">
+                <ConnectWallet
+                  theme="dark"
+                  btnTitle="Please ensure your wallet is connected"
+                />
+              </div>
             ) : (
               <>
-                <Web3Button
-                  contractAddress={MARKETPLACE_ADDRESS}
-                  action={async () => await buyListing()}
-                  className={styles.btn}
-                  onSuccess={() => {
-                    toast(`Purchase success!`, {
-                      icon: "✅",
-                      style: toastStyle,
-                      position: "bottom-center",
-                    });
-                  }}
-                  onError={(e) => {
-                    toast(`Purchase failed! Reason: ${e.message}`, {
-                      icon: "❌",
-                      style: toastStyle,
-                      position: "bottom-center",
-                    });
-                  }}
-                >
-                  Buy at asking price
-                </Web3Button>
+                {loadingContract || loadingDirect || loadingAuction ? (
+                  <Skeleton width="100%" height="164" />
+                ) : (
+                  <>
+                    <Web3Button
+                      contractAddress={MARKETPLACE_ADDRESS}
+                      action={async () => await buyListing()}
+                      className={styles.btn}
+                      onSuccess={() => {
+                        toast(`Purchase success!`, {
+                          icon: "✅",
+                          style: toastStyle,
+                          position: "bottom-center",
+                        });
+                      }}
+                      onError={(e) => {
+                        toast(`Purchase failed! Reason: ${e.message}`, {
+                          icon: "❌",
+                          style: toastStyle,
+                          position: "bottom-center",
+                        });
+                      }}
+                    >
+                      Buy at asking price
+                    </Web3Button>
 
-                <div className={`${styles.listingTimeContainer} ${styles.or}`}>
-                  <p className={styles.listingTime}>or</p>
-                </div>
+                    <div
+                      className={`${styles.listingTimeContainer} ${styles.or}`}
+                    >
+                      <p className={styles.listingTime}>or</p>
+                    </div>
 
-                <input
-                  className={styles.input}
-                  defaultValue={
-                    auctionListing?.[0]?.minimumBidCurrencyValue
-                      ?.displayValue || 0
-                  }
-                  type="number"
-                  step={0.000001}
-                  onChange={(e) => {
-                    setBidValue(e.target.value);
-                  }}
-                />
+                    <input
+                      className={styles.input}
+                      defaultValue={
+                        auctionListing?.[0]?.minimumBidCurrencyValue
+                          ?.displayValue || 0
+                      }
+                      type="number"
+                      step={0.000001}
+                      onChange={(e) => {
+                        setBidValue(e.target.value);
+                      }}
+                    />
 
-                <Web3Button
-                  contractAddress={MARKETPLACE_ADDRESS}
-                  action={async () => await createBidOrOffer()}
-                  className={styles.btn}
-                  onSuccess={() => {
-                    toast(`Bid success!`, {
-                      icon: "✅",
-                      style: toastStyle,
-                      position: "bottom-center",
-                    });
-                  }}
-                  onError={(e) => {
-                    console.log(e);
-                    toast(`Bid failed! Reason: ${e.message}`, {
-                      icon: "❌",
-                      style: toastStyle,
-                      position: "bottom-center",
-                    });
-                  }}
-                >
-                  Place bid
-                </Web3Button>
+                    <Web3Button
+                      contractAddress={MARKETPLACE_ADDRESS}
+                      action={async () => await createBidOrOffer()}
+                      className={styles.btn}
+                      onSuccess={() => {
+                        toast(`Bid success!`, {
+                          icon: "✅",
+                          style: toastStyle,
+                          position: "bottom-center",
+                        });
+                      }}
+                      onError={(e) => {
+                        console.log(e);
+                        toast(`Bid failed! Reason: ${e.message}`, {
+                          icon: "❌",
+                          style: toastStyle,
+                          position: "bottom-center",
+                        });
+                      }}
+                    >
+                      Place bid
+                    </Web3Button>
+                  </>
+                )}
               </>
             )}
           </div>

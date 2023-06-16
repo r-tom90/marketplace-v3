@@ -11,11 +11,14 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-      <h1>Buy NFTs</h1>
-      <p>Browse which NFTs are available from the collection.</p>
-      <p className="text-xs italic text-lightGray">
-        Note: Some NFTs have not yet been claimed. Click the CLAIM button above.
-      </p>
+      <div className="mx-0 xl:mx-16">
+        <h1>Buy NFTs</h1>
+        <p>Browse which NFTs are available from the collection.</p>
+        <p className="text-xs italic text-lightGray">
+          Note: Some NFTs have not yet been claimed. Click the CLAIM button
+          above.
+        </p>
+      </div>
       <NFTGrid
         data={data}
         isLoading={isLoading}

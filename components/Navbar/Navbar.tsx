@@ -15,6 +15,7 @@ export function Navbar() {
     { title: "Buy", href: "buy" },
     { title: "Sell", href: "sell" },
     { title: "Claim", href: "claim" },
+    // { title: "MuskATears", href: "mint" },
   ];
 
   const handleLinkClick = () => {
@@ -124,6 +125,7 @@ export function Navbar() {
               width={35}
               height={35}
               alt="Profile"
+              onClick={handleLinkClick}
             />
           </Link>
           {links.map((link: any) => (

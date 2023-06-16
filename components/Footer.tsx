@@ -6,11 +6,13 @@ import { MdEmail } from "react-icons/md";
 
 function Footer() {
   const muskContractAddress = "0x9d04ceaae75ddbf2ba93c0abe670899120d20e1f";
+  const marketplaceContractAddress =
+    "0x64E91A974981621CdA5a0143aa06084E6eC3b29c";
 
   const currentYear = new Date().getFullYear();
   return (
     <footer id="footer" className=" text-lightGray">
-      <div className="mx-auto max-w-7xl px-5 py-4 text-lg font-medium lg:px-9">
+      <div className="mx-auto max-w-7xl px-4 py-4 text-sm font-medium md:text-lg">
         <section className="block items-center justify-between pb-2 sm:flex">
           <p className="text-start">
             Get connected with us in our Social Birdhouse:
@@ -48,19 +50,23 @@ function Footer() {
           </div>
         </section>
         <div className="grid grid-cols-1 gap-8 border-t border-charcoal pt-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
-          <section className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1">
-            <div className="flex w-full items-center">
-              <Image
-                className="h-14 w-auto"
-                src="/logo0.png"
-                alt="Logo"
-                width={32}
-                height={32}
-              />
-              <h3 className="ml-2 text-lg font-semibold uppercase">
-                MUSK token
-              </h3>
-            </div>
+          <section className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-3">
+            <Link
+              href="https://www.muskatears.com"
+              target="blank"
+              className="cursor-pointer hover:text-twitterBlue"
+            >
+              <div className="flex w-full items-center">
+                <Image
+                  className="h-14 w-auto"
+                  src="/logo0.png"
+                  alt="Logo"
+                  width={32}
+                  height={32}
+                />
+                <h3 className="ml-2 font-semibold uppercase">MUSK token</h3>
+              </div>
+            </Link>
             <p className="text-start lg:text-center">
               Unleash the MuskATears Universe with{" "}
               <span className="font-semibold text-brightYellow">$MUSK</span> and
@@ -68,9 +74,9 @@ function Footer() {
               freedom. Join the journey today!
             </p>
           </section>
-          <section className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1">
-            <h3 className="mb-4 font-semibold uppercase">Useful Links</h3>
-            <ul className="text-base font-normal">
+          <section className="col-span-1 text-start sm:col-span-2 sm:text-center md:col-span-2 lg:col-span-1">
+            <h3 className="mb-1 font-semibold uppercase">Useful Links</h3>
+            <ul className="font-normal">
               <li className="mb-1">
                 <a
                   href={`https://etherscan.io/token/${muskContractAddress}`}
@@ -82,7 +88,7 @@ function Footer() {
               </li>
               <li className="mb-1">
                 <a
-                  href={`https://etherscan.io/token/${muskContractAddress}`}
+                  href={`https://etherscan.io/token/${marketplaceContractAddress}`}
                   target="blank"
                   className="hover:text-brightYellow"
                 >
@@ -96,6 +102,20 @@ function Footer() {
                   className="hover:text-brightYellow"
                 >
                   Trade $MUSK
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section className="col-span-1 text-start sm:col-span-2 sm:text-center md:col-span-2 lg:col-span-1">
+            <h3 className="mb-1 font-semibold uppercase">MuskAVerse</h3>
+            <ul className="font-normal">
+              <li className="mb-1">
+                <a
+                  href="https://muskatears.com/"
+                  target="blank"
+                  className="hover:text-brightYellow"
+                >
+                  MuskATears Home
                 </a>
               </li>
               <li className="mb-1">

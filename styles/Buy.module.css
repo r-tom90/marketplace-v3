@@ -37,36 +37,44 @@
 
 /* Responsive */
 
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 760px) and (max-width: 1200px) {
+@media (min-width: 1450px) {
   .nftContainer {
-    width: 22%;
+    width: 10%;
   }
 }
 
-@media (min-width: 600px) and (max-width: 760px) {
+@media (min-width: 1050px) and (max-width: 1450px) {
   .nftContainer {
-    width: 29%;
+    width: 19%;
+  }
+}
+@media (min-width: 770px) and (max-width: 1050px) {
+  .nftContainer {
+    width: 25%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 770px) {
+  .nftContainer {
+    width: 33%;
   }
 }
 
 /* Less than 600 */
 @media (min-width: 425px) and (max-width: 600px) {
   .nftContainer {
-    width: 45%;
+    width: 66%;
   }
 }
 /* Less than 600 */
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 321px) and (max-width: 380px) {
   .nftContainer {
-    width: 60%;
+    width: 75%;
   }
 }
 /* Less than 600 */
 @media (max-width: 320px) {
   .nftContainer {
-    width: 80%;
+    width: 84%;
   }
 }
