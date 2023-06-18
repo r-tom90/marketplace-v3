@@ -20,6 +20,7 @@ module.exports = {
         charcoal: "#4A4A4A",
         discordPurple: "#7289DA",
         telegramBlue: "#27A7E7",
+        primary: "#191c1f",
       },
     },
   },

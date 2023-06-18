@@ -38,7 +38,7 @@ export function Navbar() {
               className="h-14 w-14 sm:h-16 sm:w-16"
             />
           </Link>
-          <div className="hidden text-center text-sm font-semibold uppercase md:flex">
+          <div className="hidden text-center text-lg font-semibold uppercase md:flex">
             <div className="mx-auto ml-1 flex items-center space-x-0">
               {links.map((link: any) => (
                 <Link

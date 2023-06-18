@@ -14,7 +14,7 @@ export default function Buy() {
       <div className="mx-0 xl:mx-16">
         <h1>Buy NFTs</h1>
         <p>Browse which NFTs are available from the collection.</p>
-        <p className="text-xs italic text-lightGray">
+        <p className="text-xs italic text-lightGray/50">
           Note: Some NFTs have not yet been claimed. Click the CLAIM button
           above.
         </p>

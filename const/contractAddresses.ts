@@ -3,6 +3,7 @@
 // 1. Set up the network your smart contracts are deployed to.
 // First, import the chain from the package, then set the NETWORK variable to the chain.
 import { Ethereum, Goerli } from "@thirdweb-dev/chains";
+// export const NETWORK = Ethereum;
 export const NETWORK = Goerli;
 
 // 2. The address of the marketplace V3 smart contract.

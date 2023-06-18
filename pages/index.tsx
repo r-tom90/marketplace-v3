@@ -4,6 +4,14 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { Button } from "../components";
+import {
+  MuskATearsNFT,
+  CollectionFeatures,
+  UniqueNFTs,
+  Roadmap,
+  FAQ,
+} from "../components/Index/index";
 
 /**
  * Landing page with a simple gradient background and a hero asset.
@@ -47,16 +55,16 @@ const Home: NextPage = () => {
                 Where MuskATears enthusiasts gather to explore their cherished
                 NFT collections!
               </p>
-
-              <div className={styles.heroCtaContainer}>
-                <Link className={styles.heroCta} href="/buy">
-                  Get Started
-                </Link>
-              </div>
+              <Button href="/buy">Get Started</Button>
             </div>
           </div>
         </div>
       </div>
+      <MuskATearsNFT />
+      <CollectionFeatures />
+      <UniqueNFTs />
+      {/* <Roadmap /> */}
+      <FAQ />
     </div>
   );
 };

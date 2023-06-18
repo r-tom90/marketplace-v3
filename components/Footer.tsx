@@ -51,15 +51,11 @@ function Footer() {
         </section>
         <div className="grid grid-cols-1 gap-8 border-t border-charcoal pt-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
           <section className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-3">
-            <Link
-              href="https://www.muskatears.com"
-              target="blank"
-              className="cursor-pointer hover:text-twitterBlue"
-            >
-              <div className="flex w-full items-center">
+            <Link href="https://www.muskatears.com" target="blank" className="">
+              <div className="flex w-full cursor-pointer items-center">
                 <Image
-                  className="h-14 w-auto"
-                  src="/logo0.png"
+                  className="h-14 w-auto grayscale filter hover:filter-none"
+                  src="/logo1.png"
                   alt="Logo"
                   width={32}
                   height={32}
