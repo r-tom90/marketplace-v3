@@ -25,7 +25,7 @@ const MuskATearsNFT = () => {
         <Button href={"/claim"}>Grab a MuskATear</Button>
       </div>
       <div className="mt-20 flex w-[300px] flex-col items-center justify-center sm:w-[400px] md:mt-0">
-        <video className="rounded-xl" autoPlay loop muted>
+        <video className="rounded-xl" autoPlay loop muted playsInline>
           <source src="/tweeterNFT.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
