@@ -22,11 +22,11 @@ const UniqueNFTs = () => {
     >
       <div className="flex max-w-5xl flex-col items-center justify-center">
         <div className="mt-28 text-2xl font-bold md:text-5xl">
-          The Great Hunt: Find the Golden Tweeter among 1000 MuskATears!
+          The Great Hunt: Find Elon and Tweeter among 1000 MuskATears!
         </div>
         <p className="mx-2 mt-16 text-start text-xs font-medium italic text-darkGray md:my-2 md:text-center md:text-sm">
           Be the ultimate treasure hunter and seize the glory by being the first
-          to uncover the legendary Golden Tweeter and claim your grand prize!
+          to uncover the legendary Elon and Tweeter to claim your grand prize!
         </p>
       </div>
       <div className="hidden md:flex">

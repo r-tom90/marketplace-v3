@@ -48,7 +48,9 @@ export default function NFTGrid({
           )
         )
       ) : (
-        <p>{emptyText}</p>
+        <div className="flex h-32 w-full items-center justify-center">
+          <p className="text-xl font-bold text-brightYellow ">{emptyText}</p>
+        </div>
       )}
     </div>
   );

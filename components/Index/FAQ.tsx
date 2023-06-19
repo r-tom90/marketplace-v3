@@ -85,14 +85,19 @@ const FAQ = () => {
         "For the whitelist, there is an initial mint of one MuskATears per address. In the Public Sale, you can mint as many MuskATears NFTs as you want per wallet.",
     },
     {
-      question: "What is the cost to mint the NFTs?",
+      question: "How can I get on the whitelist?",
       answer:
-        "The cost to mint the NFTs during the Public Sale phase will be 0.025 ETH per NFT.",
+        "To get on the whitelist, you can follow the competition in our twitter or by holding 100m MUSK tokens in your wallet.",
     },
     {
-      question: "What happens if I find the Golden Tweeter?",
+      question: "What is the cost to mint the NFTs?",
       answer:
-        "If you find the Golden Tweeter, there will be a prize coming your way.",
+        "The cost to mint the NFTs during the 1st stage of the Public Sale phase will be 69,000,000 MUSK per NFT and 0.025 ETH per NFT for the 2nd stage.",
+    },
+    {
+      question: "What happens if I find the Tweeter and Elon NFT?",
+      answer:
+        "If you find the Tweeter and Elon, there will be a prize coming your way.",
     },
     {
       question: "What will happen to the funds raised?",

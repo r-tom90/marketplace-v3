@@ -1,7 +1,7 @@
 // https://www.youtube.com/watch?v=8FRm_efm99o&list=PLhkjr9MPgk0xtGnRBmlpsGkn1NsPl9W1-&index=3
+// youtube.com/watch?v=hjbxaYTMhy0
 
 import type { NextPage } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Button } from "../components";
@@ -56,6 +56,7 @@ const Home: NextPage = () => {
                 NFT collections!
               </p>
               <Button href="/buy">Get Started</Button>
+              {/* <button className="mt-4 h-32 w-32 animate-ping rounded-full bg-white"></button> */}
             </div>
           </div>
         </div>

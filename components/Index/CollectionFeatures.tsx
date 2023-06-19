@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=u_95SPKE6vg
+
 import Image from "next/image";
 import React from "react";
 
@@ -11,13 +13,13 @@ type Props = {
 
 const CardComponent = ({ feature }: Props) => {
   return (
-    <div className="mx-4 my-2 flex h-[400px] w-[300px] flex-col items-center rounded-xl border border-lightGray bg-primary p-6 shadow-md sm:w-[300px]">
+    <div className="hover:border-1 mx-4 my-2 flex h-[400px] w-[300px] flex-col items-center rounded-xl border border-lightGray bg-primary p-6 shadow-md hover:scale-105 hover:border-brightYellow hover:transition hover:duration-1000 sm:w-[300px]">
       <Image
         src={feature.image}
         alt="image"
         width={300}
         height={300}
-        className="h-32 w-32 rounded-full border border-lightGray object-fill"
+        className="h-32 w-32 rounded-full border border-lightGray object-fill "
       />
       <div className="mt-4 text-2xl font-semibold">{feature.title}</div>
       <div className="mt-4 overflow-y-scroll text-center text-base text-gray-500">
