@@ -122,23 +122,32 @@ const Claim = () => {
                 </p>
                 {!isActiveClaimPhaseLoading ? (
                   <div className="mt-2 text-base">
-                    <p>Claim Phase: {activeClaimPhase?.metadata?.name}</p>
-                    <p>
+                    <p className="font-bold">
+                      Claim Phase:{" "}
+                      <span className="font-normal text-lightGray">
+                        {activeClaimPhase?.metadata?.name}
+                      </span>
+                    </p>
+                    <p className="font-bold">
                       Price:{" "}
-                      {/* {ethers.utils?.formatUnits(activeClaimPhase?.price!)}{" "}
-                      {ethers.utils?.formatUnits(activeClaimPhase?.price!) >=
-                      "0.02"
-                        ? "MUSK"
-                        : "ETH"} */}
+                      <span className="font-normal text-lightGray">
+                        {ethers.utils?.formatUnits(activeClaimPhase?.price!)}{" "}
+                        {ethers.utils?.formatUnits(activeClaimPhase?.price!) >=
+                        "0.02"
+                          ? "MUSK"
+                          : "ETH"}
+                      </span>
                     </p>
                   </div>
                 ) : (
                   <p>Loading...</p>
                 )}
                 {!isTotalSupplyLoading && !isTotalClaimedLoading ? (
-                  <p>
-                    Claimed: {totalClaimed?.toNumber()}/
-                    {totalSupply?.toNumber()}
+                  <p className="font-bold">
+                    Claimed:{" "}
+                    <span className="font-normal text-lightGray">
+                      {totalClaimed?.toNumber()}/{totalSupply?.toNumber()}
+                    </span>
                   </p>
                 ) : (
                   <p>Loading...</p>
@@ -151,9 +160,11 @@ const Claim = () => {
                       ))
                     ) : (
                       <div className="">
-                        <p>
+                        <p className="font-bold">
                           You are eligible to claim.{" "}
-                          {`(Max claimable: ${maxClaimable})`}
+                          <span className="font-normal text-lightGray">
+                            {`(Max claimable: ${maxClaimable})`}
+                          </span>
                         </p>
                         <div className="text-center">
                           <div className="my-1 flex justify-center ">

@@ -136,7 +136,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
               <h3 className={styles.descriptionTitle}>Traits</h3>
               <p>TBA</p>
-              {/* <div className={styles.traitsContainer}>
+              <div className={styles.traitsContainer}>
                 {Object.entries(nft?.metadata?.attributes || {}).map(
                   ([key, value]) => (
                     <div className={styles.traitContainer} key={key}>
@@ -147,7 +147,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                     </div>
                   )
                 )}
-              </div> */}
+              </div>
 
               <h3 className={styles.descriptionTitle}>History</h3>
 

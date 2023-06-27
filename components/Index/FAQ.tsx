@@ -94,7 +94,7 @@ const FAQ = () => {
     {
       question: "What is the cost to mint the NFTs?",
       answer:
-        "The cost to mint the NFTs during the 1st stage of the Public Sale phase will be 34,500,000 MUSK per NFT and 0.02 ETH per NFT for the 2nd stage.",
+        "The cost to mint the NFTs during the 1st stage of the Public Sale phase will be 34,500,000 MUSK per NFT and 0.01 ETH per NFT for the 2nd stage.",
     },
     {
       question: "What happens if I find the Tweeter and Elon NFT?",
