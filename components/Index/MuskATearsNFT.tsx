@@ -10,9 +10,8 @@ const MuskATearsNFT = () => {
           </div>
           <p className="my-4 text-start text-lg font-medium md:text-center md:text-xl">
             Embark on an extraordinary journey in the captivating world of
-            MuskATears. Collect one of the 1000 unique hand-drawn MuskATears
-            Warriors and unlock the potential for passive income with $ETH
-            rewards.
+            MuskATears. Collect one of the 691 unique drawn MuskATears Warriors
+            and unlock the potential for passive income with $ETH rewards.
           </p>
 
           <Button href={"/claim"}>Grab a MuskATear</Button>

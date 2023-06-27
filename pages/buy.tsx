@@ -4,10 +4,25 @@ import Container from "../components/Container/Container";
 import NFTGrid from "../components/NFT/NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 
+// import { useSelector } from "react-redux";
+// import { StoreState } from "../store/store";
+
 export default function Buy() {
+  // const nftCollectionAddress = useSelector((state: StoreState) => state.nftCollectionAddress?.nftCollectionAddress);
+
+  // const { contract } = useContract(nftCollectionAddress);
+
   // Load all of the NFTs from the NFT Collection
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
-  const { data, isLoading } = useNFTs(contract);
+  // const { data, isLoading } = useNFTs(contract);
+
+  // ! Also allow for pagination
+
+  const { data, isLoading, error } = useNFTs(contract, {
+    // For example, to only return the first 50 NFTs in the collection
+    count: 692,
+    start: 0,
+  });
 
   return (
     <Container maxWidth="lg">

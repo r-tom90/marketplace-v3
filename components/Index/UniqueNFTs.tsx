@@ -17,12 +17,12 @@ const UniqueNFTs = () => {
 
   return (
     <section
-      className="flex h-screen w-screen flex-col items-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary via-black/70 to-primary
+      className="flex h-full w-screen flex-col items-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary via-black/70 to-primary md:h-screen
     "
     >
       <div className="flex max-w-5xl flex-col items-center justify-center">
         <div className="mt-28 text-2xl font-bold md:text-5xl">
-          The Great Hunt: Find Elon and Tweeter among 1000 MuskATears!
+          The Great Hunt: Find Elon and Tweeter among 691 MuskATears!
         </div>
         <p className="mx-2 mt-16 text-start text-xs font-medium italic text-darkGray md:my-2 md:text-center md:text-sm">
           Be the ultimate treasure hunter and seize the glory by being the first
@@ -34,24 +34,40 @@ const UniqueNFTs = () => {
           <div className="flex">
             <div className="max-h-[400px] min-w-full  flex-grow ">
               <Image
-                src="/test1.png"
-                alt="tweeterNFT"
-                width={400}
-                height={400}
-                className="mx-auto h-full w-full object-cover"
+                src="/Slide1.png"
+                alt="MuskATearsNfts1"
+                width={1000}
+                height={1000}
+                className="mx-auto h-full w-[75%] object-cover"
               />
             </div>
             <div className="max-h-[400px] min-w-full  flex-grow ">
               <Image
-                src="/test2.png"
-                alt="tweeterNFT"
-                width={400}
-                height={400}
-                className="mx-auto h-full w-full object-cover"
+                src="/Slide2.png"
+                alt="MuskATearsNfts2"
+                width={1000}
+                height={1000}
+                className="mx-auto h-full w-[75%] object-cover"
               />
             </div>
-            {/* <div className="min-w-full  flex-grow ">Slide 2</div>
-          <div className="min-w-full  flex-grow ">Slide 3</div> */}
+            <div className="max-h-[400px] min-w-full  flex-grow ">
+              <Image
+                src="/Slide3.png"
+                alt="MuskATearsNfts3"
+                width={1000}
+                height={1000}
+                className="mx-auto h-full w-[75%] object-cover"
+              />
+            </div>
+            <div className="max-h-[400px] min-w-full  flex-grow ">
+              <Image
+                src="/Slide4.png"
+                alt="MuskATearsNfts4"
+                width={1000}
+                height={1000}
+                className="mx-auto h-full w-[75%] object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -60,19 +76,46 @@ const UniqueNFTs = () => {
           <div className="flex">
             <div className="max-h-[400px] min-w-full flex-grow">
               <Image
-                src="/logo0.png"
-                alt="test0"
-                width={400}
-                height={400}
+                src="/L1.png"
+                alt="MuskATears NFT"
+                width={1000}
+                height={1000}
                 className="mx-auto h-full max-w-[400px] object-cover"
               />
             </div>
             <div className="max-h-[400px] min-w-full flex-grow">
               <Image
-                src="/logo1.png"
-                alt="test1"
-                width={400}
-                height={400}
+                src="/L2.png"
+                alt="MuskATears NFT"
+                width={1000}
+                height={1000}
+                className="mx-auto h-full max-w-[400px] object-cover"
+              />
+            </div>
+            <div className="max-h-[400px] min-w-full flex-grow">
+              <Image
+                src="/L3.png"
+                alt="MuskATears NFT"
+                width={1000}
+                height={1000}
+                className="mx-auto h-full max-w-[400px] object-cover"
+              />
+            </div>
+            <div className="max-h-[400px] min-w-full flex-grow">
+              <Image
+                src="/L4.png"
+                alt="MuskATears NFT"
+                width={1000}
+                height={1000}
+                className="mx-auto h-full max-w-[400px] object-cover"
+              />
+            </div>
+            <div className="max-h-[400px] min-w-full flex-grow">
+              <Image
+                src="/L5.png"
+                alt="MuskATears NFT"
+                width={1000}
+                height={1000}
                 className="mx-auto h-full max-w-[400px] object-cover"
               />
             </div>

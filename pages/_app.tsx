@@ -5,10 +5,13 @@ import NextNProgress from "nextjs-progressbar";
 import { NETWORK } from "../const/contractAddresses";
 import "../styles/globals.css";
 import Footer from "../components/Footer";
+// import { Provider } from "react-redux";
+// import { store } from "../store/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider activeChain={NETWORK}>
+      {/* <Provider store={store}> */}
       {/* Progress bar when navigating between pages */}
       <NextNProgress
         color="var(--color-tertiary)"
@@ -23,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* Render the actual component (page) */}
       <Component {...pageProps} />
       <Footer />
+      {/* </Provider> */}
     </ThirdwebProvider>
   );
 }

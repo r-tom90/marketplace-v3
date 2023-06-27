@@ -8,6 +8,8 @@ function Footer() {
   const muskContractAddress = "0x9d04ceaae75ddbf2ba93c0abe670899120d20e1f";
   const marketplaceContractAddress =
     "0x64E91A974981621CdA5a0143aa06084E6eC3b29c";
+  const collectionContractAddress =
+    "0x213162F3d4FbeC2dB1dEb4666c4d16cF6ab14A7B";
 
   const currentYear = new Date().getFullYear();
   return (
@@ -75,20 +77,20 @@ function Footer() {
             <ul className="font-normal">
               <li className="mb-1">
                 <a
-                  href={`https://etherscan.io/token/${muskContractAddress}`}
-                  target="blank"
-                  className="hover:text-brightYellow"
-                >
-                  $MUSK Contract Address
-                </a>
-              </li>
-              <li className="mb-1">
-                <a
                   href={`https://etherscan.io/token/${marketplaceContractAddress}`}
                   target="blank"
                   className="hover:text-brightYellow"
                 >
                   Marketplace Contract Address
+                </a>
+              </li>
+              <li className="mb-1">
+                <a
+                  href={`https://etherscan.io/token/${collectionContractAddress}`}
+                  target="blank"
+                  className="hover:text-brightYellow"
+                >
+                  MuskATears NFT Contract Address
                 </a>
               </li>
               <li className="mb-1">
@@ -112,6 +114,15 @@ function Footer() {
                   className="hover:text-brightYellow"
                 >
                   MuskATears Home
+                </a>
+              </li>
+              <li className="mb-1">
+                <a
+                  href={`https://etherscan.io/token/${muskContractAddress}`}
+                  target="blank"
+                  className="hover:text-brightYellow"
+                >
+                  $MUSK Contract Address
                 </a>
               </li>
               <li className="mb-1">

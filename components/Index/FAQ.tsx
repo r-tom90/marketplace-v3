@@ -20,7 +20,9 @@ const Dropdown = ({ faq }: DropdownProps) => {
         className="flex cursor-pointer items-center justify-between"
         onClick={toggleOpen}
       >
-        <h3 className="text-lg font-semibold md:text-xl">{faq.question}</h3>
+        <h3 className="text-start text-lg font-semibold md:text-xl">
+          {faq.question}
+        </h3>
         <div className="transform transition-transform">
           {isOpen ? (
             <svg
@@ -92,7 +94,7 @@ const FAQ = () => {
     {
       question: "What is the cost to mint the NFTs?",
       answer:
-        "The cost to mint the NFTs during the 1st stage of the Public Sale phase will be 69,000,000 MUSK per NFT and 0.025 ETH per NFT for the 2nd stage.",
+        "The cost to mint the NFTs during the 1st stage of the Public Sale phase will be 34,500,000 MUSK per NFT and 0.02 ETH per NFT for the 2nd stage.",
     },
     {
       question: "What happens if I find the Tweeter and Elon NFT?",

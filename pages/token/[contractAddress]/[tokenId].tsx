@@ -140,12 +140,14 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 {Object.entries(nft?.metadata?.attributes || {}).map(
                   ([key, value]) => (
                     <div className={styles.traitContainer} key={key}>
-                      {/* <p className={styles.traitName}>{value?.trait_type}</p>
-                      <p className={styles.traitValue}>{value?.value || ""}</p> */}
-                      <p className={styles.traitName}>{key}</p>
-                      <p className={styles.traitValue}>
-                        {value?.toString() || ""}
+                      <p className={styles.traitName} key={key}>
+                        {value?.trait_type}
                       </p>
+                      <p className={styles.traitValue}>{value?.value || ""}</p>
+                      {/* <p className={styles.traitName}>{key}</p> */}
+                      {/* <p className={styles.traitValue}>
+                        {value?.toString() || ""}
+                      </p> */}
                     </div>
                   )
                 )}
@@ -154,6 +156,11 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               <h3 className={styles.descriptionTitle}>History</h3>
 
               <div className={styles.traitsContainer}>
+                {!transferEvents ? (
+                  <p className="text-lightGray">No History Records</p>
+                ) : (
+                  ""
+                )}
                 {transferEvents?.map((event, index) => (
                   <div
                     key={event.transaction.transactionHash}
