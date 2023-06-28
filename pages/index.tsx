@@ -55,7 +55,7 @@ const Home: NextPage = () => {
                 Where MuskATears enthusiasts gather to explore their cherished
                 NFT collections!
               </p>
-              <Button href="/buy">Get Started</Button>
+              <Button href="/claim">Get Started</Button>
               {/* <button className="mt-4 h-32 w-32 animate-ping rounded-full bg-white"></button> */}
             </div>
           </div>

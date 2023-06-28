@@ -12,8 +12,8 @@ export function Navbar() {
   const address = useAddress();
 
   const links = [
-    { title: "Buy", href: "buy" },
-    { title: "Sell", href: "sell" },
+    // { title: "Buy", href: "buy" },
+    // { title: "Sell", href: "sell" },
     { title: "Claim", href: "claim" },
     // { title: "MuskATears", href: "mint" },
   ];
