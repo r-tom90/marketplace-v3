@@ -51,7 +51,7 @@ export function Navbar() {
               ))}
             </div>
           </div>
-          <div className="hidden w-full items-center justify-end md:flex">
+          {/* <div className="hidden w-full items-center justify-end md:flex">
             <ConnectWallet theme="dark" btnTitle="Connect " />
             {address && (
               <Link className="px-2 py-3 md:px-6" href={`/profile/${address}`}>
@@ -64,7 +64,7 @@ export function Navbar() {
                 />
               </Link>
             )}
-          </div>
+          </div> */}
 
           <div className="-mr-2 flex items-center md:hidden">
             <button
@@ -114,7 +114,7 @@ export function Navbar() {
 
       <nav className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
         <div className="space-y-1 px-2 pb-3 pt-2 text-base font-medium text-white sm:px-3">
-          <Link
+          {/* <Link
             className="flex justify-around rounded-md bg-lightGray/10 px-3 py-2 hover:text-yellow-700"
             href={`/profile/${address}`}
           >
@@ -127,7 +127,7 @@ export function Navbar() {
               alt="Profile"
               onClick={handleLinkClick}
             />
-          </Link>
+          </Link> */}
           {links.map((link: any) => (
             <Link
               key={link}
